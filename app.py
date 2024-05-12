@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import psycopg2
 from config import host, user, password, db_name
 from flask_bootstrap import Bootstrap
@@ -17,15 +17,14 @@ def get_db_connection():
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    # conn = get_db_connection()
-    # conn.autocommit = True
-    # if request.method == 'POST':
-    #     form = request.form
-    #     name = form['name']
-    #     age = form['age']
-    #     print(age, name)
-    #     with conn.cursor() as cursor:
-    #         cursor.execute('INSERT INTO employee(name, age) VALUES(%s, %s)', (name, age))
+    conn = get_db_connection()
+    conn.autocommit = True
+    if request.method == 'POST':
+        form = request.form
+        name = form['name']
+        email = form['email']
+        with conn.cursor() as cursor:
+            cursor.execute('INSERT INTO user_logins(name, email) VALUES(%s, %s)', (name, email))
 
     return render_template('index.html')
 
