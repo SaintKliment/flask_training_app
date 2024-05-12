@@ -1,10 +1,32 @@
-{% extends 'base.html' %} 
-    {% block base %}
-    <h1>Index page</h1>
-    <!-- <form method="POST">
+{% extends 'base.html' %} {% block base %}
+<h1>Index page</h1>
+<!-- <form method="POST">
         <label for="name">Name: <input type="text" name="name"></label>
         <label for="age">Age: <input type="text" name="age"></label>
          <button type="submit" class="btn btn-danger">GO!</button>
     </form> -->
-   
-    {% endblock %}
+
+<div
+  class="w-100 p-3 mx-auto"
+  style="
+    background-image: url('../static/1_1.png');
+    max-width: 1440px;
+    margin: 0 auto;
+    max-height: 460px;
+    height: 460px;
+  "
+>
+  <h3>help us, plz!</h3>
+  <p>
+    Равным образом, экономическая повестка сегодняшнего дня не даёт нам иного
+    выбора, кроме определения прогресса профессионального сообщества. Как
+    принято считать, элементы политического процесса рассмотрены исключительно в
+    разрезе маркетинговых и финансовых предпосылок.
+  </p>
+  <form method="POST">
+    <input type="text" placeholder="Name" />
+    <input type="text" placeholder="E-mail" />
+    <button type="submit">Send</button>
+  </form>
+</div>
+{% endblock %}
