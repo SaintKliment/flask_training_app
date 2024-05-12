@@ -1,15 +1,9 @@
 {% extends 'base.html' %} {% block base %}
 <h1>Index page</h1>
-<!-- <form method="POST">
-        <label for="name">Name: <input type="text" name="name"></label>
-        <label for="age">Age: <input type="text" name="age"></label>
-         <button type="submit" class="btn btn-danger">GO!</button>
-    </form> -->
-
 <div
   class="w-100 p-3 mx-auto"
   style="
-    background-image: url('../static/1_1.png');
+    background-image: url('../static/assets/1_1.png');
     max-width: 1440px;
     margin: 0 auto;
     max-height: 460px;
@@ -24,8 +18,8 @@
     разрезе маркетинговых и финансовых предпосылок.
   </p>
   <form method="POST">
-    <input type="text" placeholder="Name" />
-    <input type="text" placeholder="E-mail" />
+    <input type="text" placeholder="Name" name="name" />
+    <input type="email" placeholder="E-mail" name="email" />
     <button type="submit">Send</button>
   </form>
 </div>
