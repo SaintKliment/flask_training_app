@@ -1,0 +1,10 @@
+{% extends 'base.html' %} 
+    {% block base %}
+    <h1>Employees page</h1>
+    {% for i in employees %}
+        <h3>
+            Name: {{i[0]}}
+            Age: {{i[1]}}
+        </h3>
+    {% endfor %}
+    {% endblock %}
